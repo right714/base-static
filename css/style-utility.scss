@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+// 親のスタイルを読み込む
+@import "style.scss";
+
+// 共通パーツ(header, footer等）で、Utilityクラスを使わないようにする
+// サブページでの細かい調整でのみ使う(style-utility.cssを読み込むのも、サブページのみの想定)
+/* ========================================================= */
+/* UTILITY SCSS                                              */
+/* ========================================================= */
+@import "utility/_display";
+@import "utility/_height";
+@import "utility/_margin";
+@import "utility/_padding";
+@import "utility/_text";
+@import "utility/_width";

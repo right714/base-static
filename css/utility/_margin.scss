@@ -1,0 +1,29 @@
+@for $value from 0 through 40 {
+    .u-mg#{$value * 5} {
+        margin: $value * 0.3125em;
+    }
+}
+
+@for $value from 0 through 40 {
+    .u-mgt#{$value * 5} {
+        margin-top: $value * 0.3125em;
+    }
+}
+
+@for $value from 0 through 40 {
+    .u-mgb#{$value * 5} {
+        margin-bottom: $value * 0.3125em;
+    }
+}
+
+@for $value from 0 through 40 {
+    .u-mgr#{$value * 5} {
+        margin-right: $value * 0.3125em;
+    }
+}
+
+@for $value from 0 through 40 {
+    .u-mgl#{$value * 5} {
+        margin-left: $value * 0.3125em;
+    }
+}

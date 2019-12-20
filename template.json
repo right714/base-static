@@ -1,0 +1,13 @@
+{
+    "name": "template-css",
+    "parse": [],
+    "discard": [
+        ".editorconfig",
+        "css/style-utility.css",
+        "css/style-utility.css.map",
+        "css/style.css",
+        "css/style.css.map",
+        "template.json"
+    ],
+    "move": []
+}

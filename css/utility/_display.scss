@@ -1,0 +1,58 @@
+$display: inline, block, flex, table;
+@each $var in $display {
+    .u-#{$var} {
+        display: $var;
+    }
+}
+
+.u-hide {
+    display: none !important;
+}
+
+.u-hideSp {
+    @include sp {
+        display: none !important;
+    }
+}
+
+.u-hideSptab {
+    @include sptab {
+        display: none !important;
+    }
+}
+
+.u-hideTab {
+    @include tab {
+        display: none !important;
+    }
+}
+
+.u-hideTabpc {
+    @include tabpc {
+        display: none !important;
+    }
+}
+
+.u-hideTabwide {
+    @include tabwide {
+        display: none !important;
+    }
+}
+
+.u-hidePc {
+    @include pc {
+        display: none !important;
+    }
+}
+
+.u-hidePc2 {
+    @include pc2 {
+        display: none !important;
+    }
+}
+
+.u-hideWide {
+    @include wide {
+        display: none !important;
+    }
+}

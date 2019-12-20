@@ -1,0 +1,5 @@
+@for $value from 0 through 20 {
+    .u-w#{$value * 5}p {
+        width: $value * 5%;
+    }
+}

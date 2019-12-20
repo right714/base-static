@@ -1,0 +1,26 @@
+$align: (
+    tac: center,
+    tar: right,
+    tal: left,
+);
+@each $key, $value in $align {
+    .u-#{$key} {
+        text-align: $value;
+    }
+}
+
+$weight: (
+    normal: normal,
+    bold: 600,
+);
+@each $key, $value in $weight {
+    .u-#{$key} {
+        font-weight: $value;
+    }
+}
+
+@for $value from 1 through 10 {
+    .u-fz#{$value}x {
+        font-size: $value + em;
+    }
+}

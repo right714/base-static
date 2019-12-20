@@ -1,0 +1,92 @@
+// MediaQueries
+@mixin sp {
+    @media screen and (max-width: map-get($projectSize, sp) + px) {
+        @content;
+    }
+}
+@mixin sptab {
+    @media screen and (max-width: map-get($projectSize, tab) + px) {
+        @content;
+    }
+}
+@mixin tab {
+    @media screen and (min-width: (map-get($projectSize, sp) + 1) + px) and (max-width: map-get($projectSize, tab) + px) {
+        @content;
+    }
+}
+@mixin tabpc {
+    @media screen and (min-width: (map-get($projectSize, sp) + 1) + px) {
+        @content;
+    }
+}
+@mixin tabwide {
+    @media screen and (min-width: (map-get($projectSize, sp) + 1) + px) and (max-width: map-get($projectSize, pc) + px) {
+        @content;
+    }
+}
+@mixin pc {
+    @media screen and (min-width: (map-get($projectSize, tab) + 1) + px) {
+        @content;
+    }
+}
+@mixin pc2 {
+    @media screen and (min-width: (map-get($projectSize, tab) + 1) + px) and (max-width: map-get($projectSize, pc) + px) {
+        @content;
+    }
+}
+@mixin wide {
+    @media screen and (min-width: (map-get($projectSize, pc) + 1) + px) {
+        @content;
+    }
+}
+
+// Innerクラス作成用
+@mixin createInner() {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include sp {
+        $spPadding: map-get($padding, sp) + px;
+        padding-right: $spPadding;
+        padding-left: $spPadding;
+    }
+
+    @include tabpc {
+        $pcPadding: map-get($padding, pc);
+        $pcPaddingPx: $pcPadding + px;
+        max-width: (map-get($projectSize, inner) + $pcPadding * 2) + px;
+        padding-right: $pcPaddingPx;
+        padding-left: $pcPaddingPx;
+    }
+}
+
+// ViewWidthで作成するfont-size
+// @param $size 元となるfont-size
+// @param $width 元となる画面幅
+// @return css font-size(vw)
+@mixin fz($size, $width: map-get($projectSize, sp)) {
+    font-size: calcVw($size, $width) + vw;
+}
+
+// sizeと画面幅から割合を計算する
+// @param number $size
+// @param number $width
+// @return float
+@function calcVw($size, $width) {
+    @return $size / $width * 100;
+}
+
+// FontAwesome 5 Free用 mixin snippet
+// @param $code unicode
+// @param $color color
+// @param $size font-size
+// @param $weight font-weight *Free版ではほぼ意味ないかも
+// @return :before, :after用 css parameter
+@mixin fontAwesome($code, $color: inherit, $size: 1em, $weight: 900) {
+    content: unquote('"') + unquote(str-insert($code, "\\", 0)) + unquote('"');
+    color: $color;
+    font-weight: $weight;
+    font-size: $size;
+    font-family: "Font Awesome 5 Free";
+}
