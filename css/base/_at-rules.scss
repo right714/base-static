@@ -1,41 +1,44 @@
 // MediaQueries
+$sp: map-get($projectSize, sp);
+$tab: map-get($projectSize, tab);
+$pc: map-get($projectSize, pc);
 @mixin sp {
-    @media screen and (max-width: map-get($projectSize, sp) + px) {
+    @media screen and (max-width: $sp + px) {
         @content;
     }
 }
 @mixin sptab {
-    @media screen and (max-width: map-get($projectSize, tab) + px) {
+    @media screen and (max-width: $tab + px) {
         @content;
     }
 }
 @mixin tab {
-    @media screen and (min-width: (map-get($projectSize, sp) + 1) + px) and (max-width: map-get($projectSize, tab) + px) {
+    @media screen and (min-width: ($sp + 1) + px) and (max-width: $tab + px) {
         @content;
     }
 }
 @mixin tabpc {
-    @media screen and (min-width: (map-get($projectSize, sp) + 1) + px) {
+    @media screen and (min-width: ($sp + 1) + px) {
         @content;
     }
 }
 @mixin tabwide {
-    @media screen and (min-width: (map-get($projectSize, sp) + 1) + px) and (max-width: map-get($projectSize, pc) + px) {
+    @media screen and (min-width: ($sp + 1) + px) and (max-width: $pc + px) {
         @content;
     }
 }
 @mixin pc {
-    @media screen and (min-width: (map-get($projectSize, tab) + 1) + px) {
+    @media screen and (min-width: ($tab + 1) + px) {
         @content;
     }
 }
 @mixin pc2 {
-    @media screen and (min-width: (map-get($projectSize, tab) + 1) + px) and (max-width: map-get($projectSize, pc) + px) {
+    @media screen and (min-width: ($tab + 1) + px) and (max-width: $pc + px) {
         @content;
     }
 }
 @mixin wide {
-    @media screen and (min-width: (map-get($projectSize, pc) + 1) + px) {
+    @media screen and (min-width: ($pc + 1) + px) {
         @content;
     }
 }
@@ -65,7 +68,7 @@
 // @param $size 元となるfont-size
 // @param $width 元となる画面幅
 // @return css font-size(vw)
-@mixin fz($size, $width: map-get($projectSize, sp)) {
+@mixin fz($size, $width: $sp) {
     font-size: calcVw($size, $width) + vw;
 }
 
