@@ -8,5 +8,5 @@ strong {
 }
 
 .inner {
-    @include createInner();
+    @include innerProperty();
 }

@@ -44,7 +44,7 @@ $pc: map-get($projectSize, pc);
 }
 
 // Innerクラス作成用
-@mixin createInner() {
+@mixin innerProperty() {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
