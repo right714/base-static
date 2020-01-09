@@ -1,0 +1,21 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    @include sp {
+        font-size: 1.25rem;
+    }
+    @include tab {
+        font-size: 1.4rem;
+    }
+    @include pc {
+        font-size: 1.6rem;
+    }
+}
+
+b,
+strong {
+    font-weight: 600;
+}

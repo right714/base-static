@@ -3,26 +3,27 @@
 /* ========================================================= */
 /* BASE SCSS                                                 */
 /* ========================================================= */
-@import "base/_vars";
-@import "base/_at-rules";
-@import "base/_reboot";
+@import "base/vars";
+@import "base/at-rules";
+@import "base/reboot";
+@import "base/project";
 
 
 /* ========================================================= */
 /* LAYOUT SCSS                                               */
 /* ========================================================= */
-@import "layout/_header";
-@import "layout/_main";
-@import "layout/_footer";
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";
 
 
 /* ========================================================= */
 /* COMPONENT SCSS                                            */
 /* ========================================================= */
-// @import "component/_btn";
+// @import "component/btn";
 
 
 /* ========================================================= */
 /* PROJECT SCSS                                              */
 /* ========================================================= */
-// @import "project/_sample";
+// @import "project/sample";
