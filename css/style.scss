@@ -10,20 +10,21 @@
 
 
 /* ========================================================= */
-/* LAYOUT SCSS                                               */
+/* TEMPLATE SCSS                                             */
 /* ========================================================= */
-@import "layout/header";
-@import "layout/main";
-@import "layout/footer";
+@import "components/template/header";
+@import "components/template/main";
+@import "components/template/footer";
+
+/* ========================================================= */
+/* ATOMIC SCSS                                               */
+/* ========================================================= */
+@import "atomic/btn";
+@import "atomic/icon";
+@import "atomic/text";
 
 
 /* ========================================================= */
-/* COMPONENT SCSS                                            */
+/* COMPONENTS SCSS                                           */
 /* ========================================================= */
-// @import "component/btn";
-
-
-/* ========================================================= */
-/* PROJECT SCSS                                              */
-/* ========================================================= */
-// @import "project/sample";
+@import "components/card";
