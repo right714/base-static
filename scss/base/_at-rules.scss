@@ -1,44 +1,41 @@
 // MediaQueries
-$sp: map-get($projectSize, sp);
-$tab: map-get($projectSize, tab);
-$pc: map-get($projectSize, pc);
 @mixin sp {
-    @media screen and (max-width: $sp + px) {
+    @media screen and (max-width: $breakpoint_sp + px) {
         @content;
     }
 }
 @mixin sptab {
-    @media screen and (max-width: $tab + px) {
+    @media screen and (max-width: $breakpoint_tab + px) {
         @content;
     }
 }
 @mixin tab {
-    @media screen and (min-width: ($sp + 1) + px) and (max-width: $tab + px) {
+    @media screen and (min-width: ($breakpoint_sp + 1) + px) and (max-width: $breakpoint_tab + px) {
         @content;
     }
 }
 @mixin tabpc {
-    @media screen and (min-width: ($sp + 1) + px) {
+    @media screen and (min-width: ($breakpoint_sp + 1) + px) {
         @content;
     }
 }
 @mixin tabwide {
-    @media screen and (min-width: ($sp + 1) + px) and (max-width: $pc + px) {
+    @media screen and (min-width: ($breakpoint_sp + 1) + px) and (max-width: $breakpoint_pc + px) {
         @content;
     }
 }
 @mixin pc {
-    @media screen and (min-width: ($tab + 1) + px) {
+    @media screen and (min-width: ($breakpoint_tab + 1) + px) {
         @content;
     }
 }
 @mixin pc2 {
-    @media screen and (min-width: ($tab + 1) + px) and (max-width: $pc + px) {
+    @media screen and (min-width: ($breakpoint_tab + 1) + px) and (max-width: $breakpoint_pc + px) {
         @content;
     }
 }
 @mixin wide {
-    @media screen and (min-width: ($pc + 1) + px) {
+    @media screen and (min-width: ($breakpoint_pc + 1) + px) {
         @content;
     }
 }
@@ -50,15 +47,13 @@ $pc: map-get($projectSize, pc);
     margin-left: auto;
 
     @include sp {
-        $spPadding: map-get($padding, sp) + px;
-        padding-right: $spPadding;
-        padding-left: $spPadding;
+        padding-right: $padding_sp + px;
+        padding-left: $padding_sp + px;
     }
 
     @include tabpc {
-        $pcPadding: map-get($padding, pc);
-        $pcPaddingPx: $pcPadding + px;
-        max-width: (map-get($projectSize, inner) + $pcPadding * 2) + px;
+        $pcPaddingPx: $padding_pc + px;
+        max-width: ($inner_size + $padding_pc * 2) + px;
         padding-right: $pcPaddingPx;
         padding-left: $pcPaddingPx;
     }

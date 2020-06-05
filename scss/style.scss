@@ -10,13 +10,6 @@
 
 
 /* ========================================================= */
-/* TEMPLATE SCSS                                             */
-/* ========================================================= */
-@import "components/template/header";
-@import "components/template/main";
-@import "components/template/footer";
-
-/* ========================================================= */
 /* ATOMIC SCSS                                               */
 /* ========================================================= */
 @import "atomic/btn";
@@ -27,4 +20,6 @@
 /* ========================================================= */
 /* COMPONENTS SCSS                                           */
 /* ========================================================= */
-@import "components/card";
+@import "components/header";
+@import "components/main";
+@import "components/footer";
