@@ -1,21 +1,14 @@
-$align: (
-    tac: center,
-    tar: right,
-    tal: left,
-);
-@each $key, $value in $align {
-    .u-#{$key} {
-        text-align: $value;
+.u-text {
+    &-center {
+        text-align: center;
     }
-}
 
-$weight: (
-    normal: normal,
-    bold: 600,
-);
-@each $key, $value in $weight {
-    .u-#{$key} {
-        font-weight: $value;
+    &-right {
+        text-align: right;
+    }
+
+    &-left {
+        text-align: left;
     }
 }
 

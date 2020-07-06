@@ -1,25 +1,24 @@
-@charset "utf-8";
+@charset "UTF-8";
 
 /* ========================================================= */
-/* BASE SCSS                                                 */
+/* FOUNDATION SCSS                                           */
 /* ========================================================= */
-@import "base/vars";
-@import "base/at-rules";
-@import "base/reboot";
-@import "base/project";
-
-
-/* ========================================================= */
-/* ATOMIC SCSS                                               */
-/* ========================================================= */
-@import "atomic/btn";
-@import "atomic/icon";
-@import "atomic/text";
+@use "basis/destyle";
+@use "basis/base";
 
 
 /* ========================================================= */
 /* COMPONENTS SCSS                                           */
 /* ========================================================= */
-@import "components/header";
-@import "components/main";
-@import "components/footer";
+@use "helper/components";
+
+
+/* ========================================================= */
+/* UTILITY SCSS                                              */
+/* ========================================================= */
+@use "utility/_display";
+@use "utility/_height";
+@use "utility/_margin";
+@use "utility/_padding";
+@use "utility/_text";
+@use "utility/_width";

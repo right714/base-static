@@ -1,29 +1,47 @@
-@for $value from 0 through 40 {
-    .u-pd#{$value * 5} {
-        padding: $value * 0.3125em;
+$_maxlength: 50;
+$_stage: 4;
+$_gap_em: 0.25em;
+
+@for $value from 0 through $_maxlength {
+    .u-p#{$value * $_stage} {
+        padding: $value * $_gap_em;
     }
 }
 
-@for $value from 0 through 40 {
-    .u-pdt#{$value * 5} {
-        padding-top: $value * 0.3125em;
+@for $value from 0 through $_maxlength {
+    .u-px#{$value * $_stage} {
+        padding-right: $value * $_gap_em;
+        padding-left: $value * $_gap_em;
     }
 }
 
-@for $value from 0 through 40 {
-    .u-pdb#{$value * 5} {
-        padding-bottom: $value * 0.3125em;
+@for $value from 0 through $_maxlength {
+    .u-py#{$value * $_stage} {
+        padding-top: $value * $_gap_em;
+        padding-bottom: $value * $_gap_em;
     }
 }
 
-@for $value from 0 through 40 {
-    .u-pdr#{$value * 5} {
-        padding-right: $value * 0.3125em;
+@for $value from 0 through $_maxlength {
+    .u-pt#{$value * $_stage} {
+        padding-top: $value * $_gap_em;
     }
 }
 
-@for $value from 0 through 40 {
-    .u-pdl#{$value * 5} {
-        padding-left: $value * 0.3125em;
+@for $value from 0 through $_maxlength {
+    .u-pr#{$value * $_stage} {
+        padding-right: $value * $_gap_em;
+    }
+}
+
+@for $value from 0 through $_maxlength {
+    .u-pb#{$value * $_stage} {
+        padding-bottom: $value * $_gap_em;
+    }
+}
+
+@for $value from 0 through $_maxlength {
+    .u-pl#{$value * $_stage} {
+        padding-left: $value * $_gap_em;
     }
 }

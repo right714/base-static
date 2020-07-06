@@ -1,5 +1,9 @@
-@for $value from 0 through 20 {
-    .u-w#{$value * 5}p {
+@for $value from 0 through 25 {
+    .u-w#{$value * 4}p {
         width: $value * 5%;
     }
+}
+
+.u-w-auto {
+    width: auto !important;
 }

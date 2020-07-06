@@ -1,21 +1,14 @@
-html {
-    font-size: 62.5%;
-}
+@use "../helper/global";
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    @include sp {
+    @include global.sp {
         font-size: 1.25rem;
     }
-    @include tab {
+    @include global.tab {
         font-size: 1.4rem;
     }
-    @include pc {
+    @include global.pc {
         font-size: 1.6rem;
     }
-}
-
-b,
-strong {
-    font-weight: 600;
 }

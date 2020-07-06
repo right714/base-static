@@ -1,5 +1,7 @@
-$display: inline, block, flex, table;
-@each $var in $display {
+@use "../helper/global";
+
+$_display: inline, inline-block, block, flex, inline-flex, table, list, list-item, grid;
+@each $var in $_display {
     .u-#{$var} {
         display: $var;
     }
@@ -7,52 +9,52 @@ $display: inline, block, flex, table;
 
 .u-hide {
     display: none !important;
-}
 
-.u-hideSp {
-    @include sp {
-        display: none !important;
+    &-sp {
+        @include global.sp {
+            display: none !important;
+        }
     }
-}
 
-.u-hideSptab {
-    @include sptab {
-        display: none !important;
+    &-sptab {
+        @include global.sptab {
+            display: none !important;
+        }
     }
-}
 
-.u-hideTab {
-    @include tab {
-        display: none !important;
+    &-tab {
+        @include global.tab {
+            display: none !important;
+        }
     }
-}
 
-.u-hideTabpc {
-    @include tabpc {
-        display: none !important;
+    &-tabpc {
+        @include global.tabpc {
+            display: none !important;
+        }
     }
-}
 
-.u-hideTabwide {
-    @include tabwide {
-        display: none !important;
+    &-tabwide {
+        @include global.tabwide {
+            display: none !important;
+        }
     }
-}
 
-.u-hidePc {
-    @include pc {
-        display: none !important;
+    &-pc {
+        @include global.pc {
+            display: none !important;
+        }
     }
-}
 
-.u-hidePc2 {
-    @include pc2 {
-        display: none !important;
+    &-pc2 {
+        @include global.pc2 {
+            display: none !important;
+        }
     }
-}
 
-.u-hideWide {
-    @include wide {
-        display: none !important;
+    &-wide {
+        @include global.wide {
+            display: none !important;
+        }
     }
 }

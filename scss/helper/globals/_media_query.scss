@@ -1,0 +1,67 @@
+@use "variables/breakpoints";
+
+@function _getBreakpoint($type, $start: true) {
+    @if $type == "sp" {
+        @return breakpoints.$sp_end + px;
+    } @else if $type == "tab" {
+        @if $start {
+            @return breakpoints.$tab_start + px;
+        } @else {
+            @return breakpoints.$tab_end + px;
+        }
+    } @else {
+        @if $start {
+            @return breakpoints.$pc_start + px;
+        } @else {
+            @return breakpoints.$pc_end + px;
+        }
+    }
+}
+
+@mixin sp {
+    @media screen and (max-width: _getBreakpoint("sp", false)) {
+        @content;
+    }
+}
+
+@mixin sptab {
+    @media screen and (max-width: _getBreakpoint("tab", false)) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media screen and (min-width: _getBreakpoint("tab")) and (max-width: _getBreakpoint("tab", false)) {
+        @content;
+    }
+}
+
+@mixin tabpc {
+    @media screen and (min-width: _getBreakpoint("tab")) {
+        @content;
+    }
+}
+
+@mixin tabwide {
+    @media screen and (min-width: _getBreakpoint("tab")) and (max-width: _getBreakpoint("pc", false)) {
+        @content;
+    }
+}
+
+@mixin pc {
+    @media screen and (min-width: _getBreakpoint("pc")) {
+        @content;
+    }
+}
+
+@mixin pc2 {
+    @media screen and (min-width: _getBreakpoint("pc")) and (max-width: _getBreakpoint("pc", false)) {
+        @content;
+    }
+}
+
+@mixin wide {
+    @media screen and (min-width: (breakpoints.$pc_end + 1) + px) {
+        @content;
+    }
+}
