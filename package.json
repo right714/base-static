@@ -1,0 +1,25 @@
+{
+  "name": "template-css",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:right714/template-css.git",
+  "author": "right714",
+  "license": "MIT",
+  "devDependencies": {
+    "fibers": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-prettier": "^3.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-stylelint": "^13.0.0",
+    "prettier": "^2.1.2",
+    "sass": "^1.28.0",
+    "stylelint": "^13.7.2",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-scss": "^3.18.0"
+  },
+  "dependencies": {}
+}

@@ -3,7 +3,7 @@
     "parse": [],
     "discard": [
         ".editorconfig",
-        "css/*",
+        "assets/css/*",
         "template.json",
         "README.md"
     ],
