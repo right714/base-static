@@ -1,6 +1,6 @@
 @use "../../helper/components/btn";
 
-.btn {
-    display: block;
-    background-color: red;
+.btn-primary {
+    @include btn.generator;
+    background-color: btn.$skin;
 }

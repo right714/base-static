@@ -1,1 +1,13 @@
-// vars
+// Contents Size
+$contents: 1200;
+$cnt_padding_pc: 40;
+$cnt_padding_tab: 28;
+$cnt_padding_sp: 16;
+$inner: ($contents + ($cnt_padding_pc * 2)) + px;
+
+// Font
+$ff: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+$ff_en: sans-serif;
+$fz_pc: 16;
+$fz_tab: 14;
+$fz_sp: 12.5;

@@ -2,18 +2,18 @@
 
 @function _getBreakpoint($type, $start: true) {
     @if $type == "sp" {
-        @return breakpoints.$sp_end + px;
+        @return breakpoints.$sp_end * 1px;
     } @else if $type == "tab" {
         @if $start {
-            @return breakpoints.$tab_start + px;
+            @return breakpoints.$tab_start * 1px;
         } @else {
-            @return breakpoints.$tab_end + px;
+            @return breakpoints.$tab_end * 1px;
         }
     } @else {
         @if $start {
-            @return breakpoints.$pc_start + px;
+            @return breakpoints.$pc_start * 1px;
         } @else {
-            @return breakpoints.$pc_end + px;
+            @return breakpoints.$pc_end * 1px;
         }
     }
 }
@@ -61,7 +61,7 @@
 }
 
 @mixin wide {
-    @media screen and (min-width: (breakpoints.$pc_end + 1) + px) {
+    @media screen and (min-width: (breakpoints.$pc_end + 1) * 1px) {
         @content;
     }
 }

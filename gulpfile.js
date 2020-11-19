@@ -32,8 +32,7 @@ const stylelint = () => {
 
 const sass = () => {
     return src(paths.scss, {
-        sourcemaps: true,
-        since: lastRun(sass)
+        sourcemaps: true
     })
     .pipe(
         gulpSass({

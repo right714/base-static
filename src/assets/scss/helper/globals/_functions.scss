@@ -1,3 +1,13 @@
-@function px2em($target_fz, $default_fz: 16) {
-    @return ($target_fz / $default_fz) + em;
+@use "sass:math";
+
+@function px2rem($target) {
+    @return ($target / 10) * 1rem;
+}
+
+@function px2em($target, $parent: 16) {
+    @return ($target / $parent) * 1em;
+}
+
+@function px2per($target, $parent) {
+    @return math.percentage($target / $parent);
 }
