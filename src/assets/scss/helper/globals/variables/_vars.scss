@@ -3,7 +3,7 @@ $contents: 1200;
 $cnt_padding_pc: 40;
 $cnt_padding_tab: 28;
 $cnt_padding_sp: 16;
-$inner: ($contents + ($cnt_padding_pc * 2)) + px;
+$inner: ($contents + ($cnt_padding_pc * 2)) * 1px;
 
 // Font
 $ff: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
