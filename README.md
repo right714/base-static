@@ -3,9 +3,9 @@
 
 # Quick Start
 ```bash
-yarn
-yarn run gulp
+npm install
+npm run start
 
 # stylelint
-yarn run gulp stylelint
+npm run stylelint
 ```

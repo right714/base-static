@@ -1,8 +1,0 @@
-@use "../../helper/global";
-@use "../../helper/components/btn";
-
-.btn-secondary {
-    @include btn.generator;
-    background-color: global.$secondary;
-    color: global.$text_default;
-}

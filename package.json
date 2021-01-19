@@ -5,6 +5,10 @@
   "repository": "git@github.com:right714/template-css.git",
   "author": "right714",
   "license": "MIT",
+  "scripts": {
+    "start": "npx gulp",
+    "stylelint": "npx gulp stylelint"
+  },
   "devDependencies": {
     "fibers": "^5.0.0",
     "gulp": "^4.0.2",
@@ -20,6 +24,5 @@
     "stylelint-order": "^4.1.0",
     "stylelint-prettier": "^1.1.2",
     "stylelint-scss": "^3.18.0"
-  },
-  "dependencies": {}
+  }
 }

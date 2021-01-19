@@ -1,5 +1,5 @@
 @for $value from 0 through 25 {
-    .u-w#{$value * 4}p {
+    .u-w#{$value * 4}per {
         width: $value * 5%;
     }
 }

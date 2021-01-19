@@ -1,5 +1,18 @@
 @use "variables/breakpoints";
 
+/*
+ * $start: true にすると、min-width用のbreakpointを用意できる
+ * 下図みたいな関係になってる
+ * ex) ~~~~768px ~~1023px ~~~~~~~1360px
+ * ---sp---
+ * -----sptab------
+ *         --tab---
+ *         ----------tabpc--------------
+ *         -------tabwide--------
+ *                        --pc----------
+ *                        --pc2--
+ *                                      --wide-----
+*/
 @function _getBreakpoint($type, $start: true) {
     @if $type == "sp" {
         @return breakpoints.$sp_end * 1px;
