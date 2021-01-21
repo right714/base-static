@@ -1,11 +1,10 @@
 {
-    "name": "template-css",
-    "parse": [],
-    "discard": [
-        ".editorconfig",
-        "assets/css/*",
-        "template.json",
-        "README.md"
-    ],
-    "move": []
+  "name": "template-css",
+  "parse": [],
+  "discard": [
+    "assets/css/*",
+    "template.json",
+    "README.md"
+  ],
+  "move": []
 }

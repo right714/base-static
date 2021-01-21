@@ -1,28 +1,45 @@
 {
-  "name": "template-css",
+  "name": "base-static",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:right714/template-css.git",
+  "repository": "git@github.com:right714/base-static.git",
   "author": "right714",
   "license": "MIT",
   "scripts": {
-    "start": "npx gulp",
-    "stylelint": "npx gulp stylelint"
+    "dev": "npx run-p server *:watch",
+    "code-check": "npx run-s *:lint",
+    "code-format": "npx run-s *:format",
+    "build": "npx run-s *:build",
+    "server": "npx browser-sync start --config bs-config.js",
+    "css:build": "npx run-s sass:compile pcss",
+    "sass:compile": "npx sass src/scss:public/assets/css",
+    "sass:watch": "npx sass src/scss:public/assets/css --watch",
+    "sass:lint": "npx stylelint --fix 'src/scss/**/*.scss'",
+    "sass:format": "npx prettier --write 'src/scss/**/*.scss'",
+    "pcss": "npx postcss --replace public/assets/css/**/*.css",
+    "js:build": "npx babel src/scripts --out-dir public/assets/scripts",
+    "js:watch": "npx babel src/scripts --watch --out-dir public/assets/scripts",
+    "js:lint": "npx eslint 'src/scripts/**/*.{js,jsx,ts,tsx}'",
+    "js:format": "npx prettier --write 'src/scripts/**/*.{js,jsx,ts,tsx}'"
   },
-  "devDependencies": {
-    "fibers": "^5.0.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-connect": "^5.7.0",
-    "gulp-prettier": "^3.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-stylelint": "^13.0.0",
-    "prettier": "^2.1.2",
-    "sass": "^1.28.0",
-    "stylelint": "^13.7.2",
+  "dependencies": {
+    "autoprefixer": "^10.2.3",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.26.13",
+    "eslint": "^7.18.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
+    "prettier": "^2.2.1",
+    "reload": "^3.1.1",
+    "sass": "^1.32.5",
+    "stylelint": "^13.9.0",
     "stylelint-config-recommended-scss": "^4.2.0",
     "stylelint-order": "^4.1.0",
-    "stylelint-prettier": "^1.1.2",
     "stylelint-scss": "^3.18.0"
-  }
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
 }

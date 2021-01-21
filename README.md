@@ -1,11 +1,29 @@
-# Let's pollinate
-`pollinate right714/template-css --name <PROJECT_NAME>`
+# Scaffolding
+`pollinate right714/base-static --name <PROJECT_NAME>`
 
-# Quick Start
+# Use
+## Start Webserver & SCSS/JS watch
 ```bash
 npm install
-npm run start
-
-# stylelint
-npm run stylelint
+npm run dev
 ```
+## Linter
+```bash
+npm run code-check
+```
+
+## Format
+```bash
+npm run code-format
+```
+
+## Build
+```bash
+npm run build
+```
+
+# TODO
+- HTMLのテンプレートエンジン
+- Imageの圧縮
+- Stylelint/ESLintのルール選定
+- `build`を`dist`ディレクトリなどに

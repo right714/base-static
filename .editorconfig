@@ -7,5 +7,5 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = false
 
-[{package.json,yarn.lock}]
+[{package.json,package-lock.json,.prettierrc,.stylelintrc,template.json,.babelrc,.eslintrc,postcss.config.js}]
 indent_size = 2
