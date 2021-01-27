@@ -32,7 +32,6 @@
     "postcss": "^8.2.4",
     "postcss-cli": "^8.3.1",
     "prettier": "^2.2.1",
-    "reload": "^3.1.1",
     "sass": "^1.32.5",
     "stylelint": "^13.9.0",
     "stylelint-config-recommended-scss": "^4.2.0",
