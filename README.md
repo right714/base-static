@@ -26,4 +26,6 @@ npm run build
 - HTMLのテンプレートエンジン
 - Imageの圧縮
 - Stylelint/ESLintのルール選定
+    - ESLintは一旦recommendedで良さそう？
+    - [Stylelintルール](https://stylelint.io/user-guide/rules/list)
 - `build`を`dist`ディレクトリなどに

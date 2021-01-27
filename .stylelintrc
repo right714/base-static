@@ -3,6 +3,8 @@
   "plugins": ["stylelint-scss", "stylelint-order"],
   "extends": "stylelint-config-recommended-scss",
   "rules": {
+    "color-hex-case": "lower",
+    "declaration-block-no-duplicate-properties": true,
     "order/properties-order": [
       "box-sizing",
       "display",
