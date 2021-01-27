@@ -1,9 +1,0 @@
-@for $value from 0 through 25 {
-    .u-w#{$value * 4}per {
-        width: $value * 5%;
-    }
-}
-
-.u-w-auto {
-    width: auto !important;
-}
